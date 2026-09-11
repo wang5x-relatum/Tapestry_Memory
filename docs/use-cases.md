@@ -6,7 +6,7 @@ Status: draft awaiting user review. This document describes target applications 
 
 ## Positioning in one sentence
 
-When an agent needs to connect experiences across time and topics rather than retain only the latest conversation turns, rmc-memory can serve as an external relational memory layer. The host controls writing, permissions, and responses; the engine handles graph storage and bounded retrieval. These responsibilities must remain distinct.
+When an agent needs to connect experiences across time and topics rather than retain only the latest conversation turns, tapestry-memory can serve as an external relational memory layer. The host controls writing, permissions, and responses; the engine handles graph storage and bounded retrieval. These responsibilities must remain distinct.
 
 A memory node can represent an event, an explicit preference, or a confirmed fact; an edge can represent a host-supplied relationship. The engine must not be advertised as automatically identifying truth, understanding every relationship, or guaranteeing that nothing is forgotten. A provenance reference supports tracing, not proof of truth.
 
@@ -47,7 +47,7 @@ Acceptance focuses on citing actual exercises, avoiding repeated ineffective exp
 
 Example: a user switches from a desktop assistant to a home robot and expects earlier topics and forms of address to continue. After checking identity and device permissions, the host uses the same authorized memory scope or explicitly imports permitted data; the engine does not synchronize devices itself.
 
-Where a product uses “soul” to describe persistent identity and interaction style, rmc-memory can be its memory component, but does not include identity policy, value policy, an emotional system, or complete behavior orchestration. The host owns perception reliability, identification of multiple people, synchronization, and conflict resolution.
+Where a product uses “soul” to describe persistent identity and interaction style, tapestry-memory can be its memory component, but does not include identity policy, value policy, an emotional system, or complete behavior orchestration. The host owns perception reliability, identification of multiple people, synchronization, and conflict resolution.
 
 Acceptance focuses on traceable experiences after changing models or devices, separation between users sharing a device, and persistence after offline reopening. Physical actions must pass independent safety controls; a historical permission to approach does not replace current obstacle detection and consent.
 

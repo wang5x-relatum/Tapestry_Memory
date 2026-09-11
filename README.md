@@ -1,40 +1,44 @@
-# rmc-memory
+# tapestry-memory
 
 English | [中文](README.zh.md)
 
 **A relational memory engine for traceable, cross-session agent memory.**
 
-RMC stands for Relational Memory Core. The project is named `rmc-memory`; its planned Python import name is `rmc_memory`.
+The project and distribution name is `tapestry-memory`; the Python import name is `tapestry_memory`.
 
 ## Current status
 
-This repository is in contract design. Bilingual documentation and documentation checks are available; the standalone memory engine is not implemented, and no installation or usage readiness is claimed. `0.1.0` is the planned first release, not a published version. Package-name availability, license, rights holder, and public hosting address must be confirmed before publication.
+This repository is in stage 2: local core implementation of the standalone memory library. This is not a published package or an artifact-accepted release. Unit and contract acceptance must be reported against the local implementation, separately from documentation checks; this page makes no test-pass claim. Wheel/sdist installation and artifact acceptance are deferred to stage 2.4. `0.1.0` is the intended version, not a published version. Package-name availability, license, rights holder, and public hosting address must be confirmed before publication.
 
 ## Product boundaries
 
-The target is an embedded graph memory library built on the Python standard library and SQLite: the host decides which nodes and relationships to write, the engine organizes storage and retrieval, and the host model generates answers. It is not a language model, complete agent platform, knowledge-base crawler, or robot control system.
+The core is an embedded graph memory library built on Python's standard library and SQLite: the host decides which nodes and relationships to write, the engine organizes storage and retrieval, and the host model generates answers. It is not a language model, complete agent platform, knowledge-base crawler, or robot control system.
 
-The core targets no third-party runtime dependencies and no network access by default. An optional matching strategy does not imply enabling embeddings by default; a test mock provides no semantic capability. There are no standalone-package performance, isolation, or benchmark results to promise yet.
+The stage-2 contract requires no third-party runtime dependencies, offline operation by default, and no imports from Relatum internals. Omitted namespace means `default`; explicit `None`, empty strings, and whitespace-only strings are rejected. Node identity is a scoped UUID, not a content hash. Retrieval is bounded, deterministic BFS with observable budget exhaustion. Scoped logical deletion, transaction rollback and database reopening, and JSON provenance round-tripping are acceptance requirements, not benchmark claims.
+
+## Limitations
+
+Stage 2 does not provide automatic relation extraction, automatic conflict arbitration, multi-device synchronization, distributed service operation, or arbitrary-scale guarantees. It does not impose 500-character truncation, promise GDPR-complete deletion, or enable embeddings by default. Namespace isolation is not host authentication or authorization. Logical deletion does not erase external source documents, host logs, backups, or storage media. No standalone-package performance or semantic-quality result is claimed.
 
 ## Start here
 
 - [Use-case draft](docs/use-cases.md): companionship, customer service, education, robotics, and selection boundaries; awaiting user review.
-- [v0.1 contract draft](docs/v0.1-contract.md): scope, data lifecycle, and stage acceptance; not an implemented interface.
+- [v0.1 contract](docs/v0.1-contract.md): stage-2 behavior, data lifecycle, and acceptance boundaries.
 - [Bilingual documentation](docs/i18n/README.md): equal language authority, three-file pairing, and checking limits.
 
-## Local documentation development
+## Local development checks
 
 Python 3.10 or newer is required. Run from the repository root:
 
 ```sh
-python3 -m unittest discover -s tests -v
+PYTHONPATH=src python3 -m unittest discover -s tests -v
 python3 scripts/check_docs.py
 ```
 
-These commands validate documentation tooling and pairing consistency, not the unimplemented memory engine. Code, APIs, and behavior documentation should change together: define acceptance conditions first, then validate implementation through real public entry points.
+Running a command is not an acceptance result. Report unit and contract test outcomes with their scope and counts; documentation checks are separate and do not verify runtime behavior or translation quality. API examples are omitted until the implementation's public interface is reconciled with the contract. Changed bilingual documents require human review before recording new hashes with `--record ... --reviewed`; stale hashes remain visible until that review is complete.
 
 ## Communication and publication
 
 During this stage, local documents are reviewed through existing collaboration channels. No Discord or other community platform requiring additional cross-border network-access tools is required, and no corporate email address, group code, or support channel is invented. Confirm an accessible feedback channel before publication; core use must not depend on a community account or an online documentation site.
 
-Public release has not been authorized, and no license has been selected; an open-source usage license must not be assumed. A future documentation site will be generated from repository sources rather than maintaining a second set of technical content. Validate installation artifacts before publishing those same verified artifacts.
+Public release has not been authorized, and no license has been selected; an open-source usage license must not be assumed. A future documentation site will be generated from repository sources rather than maintaining a second set of technical content. Stage 2.4 must validate installation artifacts before any later authorized publication of those same verified artifacts.
