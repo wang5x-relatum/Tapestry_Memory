@@ -9,7 +9,7 @@ description = "Offline namespace-scoped SQLite graph memory"
 readme = "README.md"
 license = "Apache-2.0"
 license-files = ["LICENSE"]
-authors = [{ name = "Metarelatum (越迹科技（宁波）有限公司)" }]
+authors = [{ name = "MetaRelatum (越迹科技（宁波）有限公司)" }]
 requires-python = ">=3.10"
 dependencies = []
 

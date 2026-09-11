@@ -8,7 +8,7 @@ The project and distribution name is `tapestry-memory`; the Python import name i
 
 ## Current status
 
-This repository is in stage 2: local core implementation and artifact validation of the standalone memory library. This is not a published package. Unit, contract, and artifact acceptance are reported separately from documentation checks; this page does not replace those reports. A clean wheel installation and offline example validation passed locally; sdist installation has not been claimed. `0.1.0` is the intended version, not a published version. The project uses Apache-2.0 with Metarelatum (越迹科技（宁波）有限公司) as the stated copyright holder; publication and the public hosting address remain subject to final release approval.
+This repository is in stage 2: local core implementation and artifact validation of the standalone memory library. This is not a published package. Unit, contract, and artifact acceptance are reported separately from documentation checks; this page does not replace those reports. A clean wheel installation and offline example validation passed locally; sdist installation has not been claimed. `0.1.0` is the intended version, not a published version. The project uses Apache-2.0 with MetaRelatum (越迹科技（宁波）有限公司) as the stated copyright holder; publication and the public hosting address remain subject to final release approval.
 
 ## Product boundaries
 
@@ -27,6 +27,25 @@ Stage 2 does not provide automatic relation extraction, automatic conflict arbit
 - [Offline example](examples/basic_usage.py): synthetic add, edge, retrieve, delete, and reopen flow using the public API.
 - [Bilingual documentation](docs/i18n/README.md): equal language authority, three-file pairing, and checking limits.
 
+## Usage
+
+`tapestry-memory` is an embedded memory engine: create a namespace, add memory nodes and directed relationships, then retrieve a bounded neighborhood. Retrieval follows stored graph edges; it is not keyword or semantic search.
+
+```python
+from tapestry_memory import MemoryStore
+
+with MemoryStore("memory.db", namespace="demo") as store:
+    observation = store.add_node(
+        "The user likes coffee.",
+        metadata={"provenance": {"source": "synthetic:example"}},
+    )
+    sleep = store.add_node("The user slept poorly last night.")
+    store.add_edge(observation.id, sleep.id, "related")
+    result = store.retrieve([observation.id], top_k=5)
+```
+
+This package focuses on the memory-engine layer—graph storage and relationship traversal. It is also related to Relatum, a broader relationship-oriented AI research system; other Relatum research or system components are not part of this distribution, and no public integration is promised by this package. The project is maintained by MetaRelatum (越迹科技（宁波）有限公司), whose engineering focus includes traceability, verifiability, and trustworthy system behavior as design goals—not guarantees that provenance proves truth.
+
 ## Local development checks
 
 Python 3.10 or newer is required. Run from the repository root:
@@ -42,4 +61,4 @@ Running a command is not an acceptance result. Report unit and contract test out
 
 During this stage, local documents are reviewed through existing collaboration channels. No Discord or other community platform requiring additional cross-border network-access tools is required, and no corporate email address, group code, or support channel is invented. Confirm an accessible feedback channel before publication; core use must not depend on a community account or an online documentation site.
 
-The repository now carries the standard Apache-2.0 license with Metarelatum (越迹科技（宁波）有限公司) as the stated copyright holder. The domain is registered, but its exact address is not recorded here. This does not claim trademark registration for `tapestry-memory`, and publication remains subject to final release approval. A future documentation site will be generated from repository sources rather than maintaining a second set of technical content.
+The repository now carries the standard Apache-2.0 license with MetaRelatum (越迹科技（宁波）有限公司) as the stated copyright holder. The domain is registered, but its exact address is not recorded here. This does not claim trademark registration for `tapestry-memory`, and publication remains subject to final release approval. A future documentation site will be generated from repository sources rather than maintaining a second set of technical content.
