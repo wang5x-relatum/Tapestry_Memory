@@ -8,7 +8,7 @@ The project and distribution name is `tapestry-memory`; the Python import name i
 
 ## Current status
 
-This repository is in stage 2: local core implementation and artifact validation of the standalone memory library. This is not a published package. Unit, contract, and artifact acceptance are reported separately from documentation checks; this page does not replace those reports. Wheel/sdist installation and offline example validation passed locally; `0.1.0` is the intended version, not a published version. Package-name availability, license, rights holder, and public hosting address must be confirmed before publication.
+This repository is in stage 2: local core implementation and artifact validation of the standalone memory library. This is not a published package. Unit, contract, and artifact acceptance are reported separately from documentation checks; this page does not replace those reports. A clean wheel installation and offline example validation passed locally; sdist installation has not been claimed. `0.1.0` is the intended version, not a published version. The project uses Apache-2.0 with Metarelatum (越迹科技（宁波）有限公司) as the stated copyright holder; publication and the public hosting address remain subject to final release approval.
 
 ## Product boundaries
 
@@ -36,10 +36,10 @@ PYTHONPATH=src python3 -m unittest discover -s tests -v
 python3 scripts/check_docs.py
 ```
 
-Running a command is not an acceptance result. Report unit and contract test outcomes with their scope and counts; documentation checks are separate and do not verify runtime behavior or translation quality. API examples are omitted until the implementation's public interface is reconciled with the contract. Changed bilingual documents require human review before recording new hashes with `--record ... --reviewed`; stale hashes remain visible until that review is complete.
+Running a command is not an acceptance result. Report unit and contract test outcomes with their scope and counts; documentation checks are separate and do not verify runtime behavior or translation quality. The offline example uses the public API and synthetic data; its local validation does not replace unit, contract, or artifact acceptance. Changed bilingual documents require human review before recording new hashes with `--record ... --reviewed`; stale hashes remain visible until that review is complete.
 
 ## Communication and publication
 
 During this stage, local documents are reviewed through existing collaboration channels. No Discord or other community platform requiring additional cross-border network-access tools is required, and no corporate email address, group code, or support channel is invented. Confirm an accessible feedback channel before publication; core use must not depend on a community account or an online documentation site.
 
-Public release has not been authorized, and no license has been selected; an open-source usage license must not be assumed. A future documentation site will be generated from repository sources rather than maintaining a second set of technical content. Stage 2.4 must validate installation artifacts before any later authorized publication of those same verified artifacts.
+The repository now carries the standard Apache-2.0 license with Metarelatum (越迹科技（宁波）有限公司) as the stated copyright holder. The domain is registered, but its exact address is not recorded here. This does not claim trademark registration for `tapestry-memory`, and publication remains subject to final release approval. A future documentation site will be generated from repository sources rather than maintaining a second set of technical content.

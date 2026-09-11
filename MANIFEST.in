@@ -1,5 +1,6 @@
 include README.md
 include pyproject.toml
+include LICENSE
 graft src/tapestry_memory
 exclude MANIFEST.in
 prune docs
