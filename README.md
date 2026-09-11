@@ -22,7 +22,8 @@ Stage 2 does not provide automatic relation extraction, automatic conflict arbit
 
 ## Start here
 
-- [Use-case draft](docs/use-cases.md): companionship, customer service, education, robotics, and selection boundaries; awaiting user review.
+- [Potential typical applications](docs/use-cases.md): companionship, customer service, education, and robotics, with boundaries for independent evaluation.
+- [Historical LongMemEval evaluation](docs/evaluations/longmemeval.md): a 90-question pre-package experiment, recorded with explicit attribution limits.
 - [v0.1 contract](docs/v0.1-contract.md): stage-2 behavior, data lifecycle, and acceptance boundaries.
 - [Offline example](examples/basic_usage.py): synthetic add, edge, retrieve, delete, and reopen flow using the public API.
 - [Bilingual documentation](docs/i18n/README.md): equal language authority, three-file pairing, and checking limits.

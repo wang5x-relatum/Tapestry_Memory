@@ -1,8 +1,8 @@
-# Use cases
+# Potential Typical Applications
 
 English | [中文](use-cases.zh.md)
 
-Status: draft awaiting user review. This document describes target applications and suggested acceptance checks, not deployed customer cases, implemented features, or industry compliance certifications. Implementation boundaries belong to the [v0.1 contract](v0.1-contract.md).
+This document uses synthetic examples to illustrate potential typical applications. It does not represent deployed customer cases, implemented features, or industry compliance certifications. Implementation boundaries belong to the [v0.1 contract](v0.1-contract.md).
 
 ## Positioning in one sentence
 
@@ -68,9 +68,3 @@ Deleting a graph node does not automatically delete external source documents, l
 Prioritize personal assistants and bounded embedded applications that need cross-session, cross-event relationships. Developers must be willing to define when to write, how to relate records, and what should be forgotten. For fixed preferences alone, a configuration file or simple key-value store may be more appropriate.
 
 Do not use it directly for large shared graphs without scale validation, as the sole retrieval layer for massive document search, as the basis for clinical or legal decisions, or for real-time motion control. No public-package throughput, latency, or node-count promise exists yet; internal experimental scale is not a service-level agreement.
-
-## First demonstrations and review questions
-
-Start with two synthetic-data demonstrations that are offline by default: customer-service continuity across two tickets and preference correction in companionship. Both use public write/retrieve/delete entry points to expose provenance and update boundaries; examples are not production integrations and do not begin with paid APIs.
-
-Please review four points: which scenario should lead the first release; whether “robot interaction memory” matches product positioning; which memories must never be written by default; and which effects require evidence before public claims. Finalize demonstration content after review rather than turning four industries into four separate products.

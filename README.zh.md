@@ -22,7 +22,8 @@
 
 ## 从这里开始
 
-- [适用场景初稿](docs/use-cases.zh.md)：陪伴、客服、教育、机器人及选型边界，等待用户审核。
+- [潜在典型应用场景](docs/use-cases.zh.md)：陪伴、客服、教育、机器人及其边界，交由用户自行体验判断。
+- [LongMemEval 历史评估](docs/evaluations/longmemeval.zh.md)：独立建库前的 90 题实验记录，明确结果归因边界。
 - [v0.1 契约](docs/v0.1-contract.zh.md)：阶段 2 行为、数据生命周期与验收边界。
 - [离线示例](examples/basic_usage.py)：使用公开 API 和合成数据演示新增、连边、检索、删除与重开。
 - [双语文档规范](docs/i18n/README.zh.md)：中英文同权、三文件配对和检查边界。
