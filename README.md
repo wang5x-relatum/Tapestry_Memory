@@ -8,7 +8,7 @@ The project and distribution name is `tapestry-memory`; the Python import name i
 
 ## Current status
 
-This repository is in stage 2: local core implementation of the standalone memory library. This is not a published package or an artifact-accepted release. Unit and contract acceptance must be reported against the local implementation, separately from documentation checks; this page makes no test-pass claim. Wheel/sdist installation and artifact acceptance are deferred to stage 2.4. `0.1.0` is the intended version, not a published version. Package-name availability, license, rights holder, and public hosting address must be confirmed before publication.
+This repository is in stage 2: local core implementation and artifact validation of the standalone memory library. This is not a published package. Unit, contract, and artifact acceptance are reported separately from documentation checks; this page does not replace those reports. Wheel/sdist installation and offline example validation passed locally; `0.1.0` is the intended version, not a published version. Package-name availability, license, rights holder, and public hosting address must be confirmed before publication.
 
 ## Product boundaries
 
@@ -24,6 +24,7 @@ Stage 2 does not provide automatic relation extraction, automatic conflict arbit
 
 - [Use-case draft](docs/use-cases.md): companionship, customer service, education, robotics, and selection boundaries; awaiting user review.
 - [v0.1 contract](docs/v0.1-contract.md): stage-2 behavior, data lifecycle, and acceptance boundaries.
+- [Offline example](examples/basic_usage.py): synthetic add, edge, retrieve, delete, and reopen flow using the public API.
 - [Bilingual documentation](docs/i18n/README.md): equal language authority, three-file pairing, and checking limits.
 
 ## Local development checks
